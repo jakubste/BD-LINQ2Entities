@@ -37,7 +37,7 @@ namespace StepakJakub
             BlogForm blogform = new BlogForm();
             blogform.ShowDialog();
 
-            Console.ReadLine();
+            Console.Read();
         }
     }
 }

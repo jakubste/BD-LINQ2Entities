@@ -56,6 +56,12 @@
   <ItemGroup>
     <Compile Include="Blog.cs" />
     <Compile Include="BlogContext.cs" />
+    <Compile Include="BlogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BlogForm.Designer.cs">
+      <DependentUpon>BlogForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201511071858584_addUrl.cs" />
     <Compile Include="Migrations\201511071858584_addUrl.Designer.cs">
       <DependentUpon>201511071858584_addUrl.cs</DependentUpon>
@@ -68,14 +74,13 @@
     <Compile Include="Migrations\201511071947505_dbset.Designer.cs">
       <DependentUpon>201511071947505_dbset.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\BlogForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Migrations\BlogForm.Designer.cs">
-      <DependentUpon>BlogForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Migrations\User.cs" />
+    <Compile Include="StepakJakubBlogContextDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StepakJakubBlogContextDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
     <Compile Include="Post.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -83,16 +88,6 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-    <Compile Include="StepakJakubDatabaseDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StepakJakubDatabaseDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="_StepakJakub_BlogContextDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_StepakJakub_BlogContextDataSet.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -102,30 +97,22 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="StepakJakubDatabaseDataSet.xsc">
-      <DependentUpon>StepakJakubDatabaseDataSet.xsd</DependentUpon>
+    <None Include="StepakJakubBlogContextDataSet.xsc">
+      <DependentUpon>StepakJakubBlogContextDataSet.xsd</DependentUpon>
     </None>
-    <None Include="StepakJakubDatabaseDataSet.xsd">
+    <None Include="StepakJakubBlogContextDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>StepakJakubDatabaseDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>StepakJakubBlogContextDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="StepakJakubDatabaseDataSet.xss">
-      <DependentUpon>StepakJakubDatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="_StepakJakub_BlogContextDataSet.xsc">
-      <DependentUpon>_StepakJakub_BlogContextDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="_StepakJakub_BlogContextDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_StepakJakub_BlogContextDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_StepakJakub_BlogContextDataSet.xss">
-      <DependentUpon>_StepakJakub_BlogContextDataSet.xsd</DependentUpon>
+    <None Include="StepakJakubBlogContextDataSet.xss">
+      <DependentUpon>StepakJakubBlogContextDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BlogForm.resx">
+      <DependentUpon>BlogForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201511071858584_addUrl.resx">
       <DependentUpon>201511071858584_addUrl.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,9 +121,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201511071947505_dbset.resx">
       <DependentUpon>201511071947505_dbset.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\BlogForm.resx">
-      <DependentUpon>BlogForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
