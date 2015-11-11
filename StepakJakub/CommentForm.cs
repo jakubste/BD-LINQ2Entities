@@ -22,6 +22,7 @@ namespace StepakJakub.Migrations
 
         IEnumerable<Blog> blogs;
         IEnumerable<Post> posts;
+        IEnumerable<Comment> comments;
 
         private void refresh ()
         {
@@ -30,13 +31,13 @@ namespace StepakJakub.Migrations
             bContext.PostsList.Load();
             bContext.CommentsList.Load();
 
-            this.blogsList.DataSource = (from blog in bContext.BlogsList.Local
+
+            this.blogsList.DataSource = (from blog in bContext.BlogsList
                                          select blog.Name).ToList();
 
-            blogs = from blog in bContext.BlogsList.Local
-                    select blog;
-            posts = from post in bContext.PostsList.Local
-                    select post;
+            blogs = bContext.BlogsList.Include(b => b.Posts);
+            posts = bContext.PostsList;
+            comments = bContext.CommentsList;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -72,17 +73,17 @@ namespace StepakJakub.Migrations
 
                 if (posts != null && curr_post_name != null && curr_post_name != "")
                 {
-                    var post = posts.Where(p => p.Title == curr_post_name).ToList()[0];
-                    if (post.Comments != null)
+                    var post = posts.Where(p => p.Title == curr_post_name).Select(p=>p.PostId).First();
+                    List<string> commentsList = new List<string>();
+
+                    foreach (var comment in comments)
                     {
-                        Console.WriteLine("no elo");
-                        this.commentsList.DataSource = post.Comments.Select(c => c.Content).ToList();
+                        if (comment.PostId == post)
+                        {
+                            commentsList.Add(comment.Content);
+                        }
                     }
-                    else
-                    {
-                        Console.WriteLine("null :(");
-                        this.commentsList.DataSource = null;
-                    }
+                    this.commentsList.DataSource = commentsList;
                 }
             }
         }
@@ -95,7 +96,7 @@ namespace StepakJakub.Migrations
 
                 if (posts != null && curr_post_name != null && curr_post_name != "")
                 {
-                    var post = posts.Where(b => b.Title == curr_post_name).ToList()[0];
+                    var post = posts.Where(b => b.Title == curr_post_name).First();
                     AddComment cm = new AddComment(post);
                     cm.ShowDialog();
                 }

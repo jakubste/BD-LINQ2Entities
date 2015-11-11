@@ -77,7 +77,7 @@ namespace StepakJakub
 
 
 
-            Console.Read();
+            //Console.Read();
         }
     }
 }

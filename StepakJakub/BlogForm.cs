@@ -80,5 +80,10 @@ namespace StepakJakub
         {
             bContext.SaveChanges();
         }
+
+        private void postsBindingNavigator_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
     }
 }

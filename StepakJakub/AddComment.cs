@@ -31,9 +31,6 @@ namespace StepakJakub
             comment.Content = commentText.Text.ToString();
             comment.PostId = post.PostId;
 
-            Console.WriteLine(comment.Content);
-            Console.WriteLine(comment.PostId);
-
             bContext.CommentsList.Add(comment);
             bContext.SaveChanges();
             this.Close();

@@ -30,14 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BlogForm));
-            this.stepakJakubBlogContextDataSet = new StepakJakub.StepakJakubBlogContextDataSet();
-            this.blogsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.blogsTableAdapter = new StepakJakub.StepakJakubBlogContextDataSetTableAdapters.BlogsTableAdapter();
-            this.tableAdapterManager = new StepakJakub.StepakJakubBlogContextDataSetTableAdapters.TableAdapterManager();
             this.blogsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -48,19 +45,16 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.blogsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.blogsDataGridView = new System.Windows.Forms.DataGridView();
-            this.postsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.postsTableAdapter = new StepakJakub.StepakJakubBlogContextDataSetTableAdapters.PostsTableAdapter();
+            this.PostCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.postsDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Blog = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AddPostButton = new System.Windows.Forms.Button();
             this.refreshButton = new System.Windows.Forms.Button();
             this.postsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -71,44 +65,28 @@
             this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.savePosts = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.postsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.stepakJakubBlogContextDataSet = new StepakJakub.StepakJakubBlogContextDataSet();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PostCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.stepakJakubBlogContextDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blogsBindingSource)).BeginInit();
+            this.blogsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.blogsTableAdapter = new StepakJakub.StepakJakubBlogContextDataSetTableAdapters.BlogsTableAdapter();
+            this.tableAdapterManager = new StepakJakub.StepakJakubBlogContextDataSetTableAdapters.TableAdapterManager();
+            this.postsTableAdapter = new StepakJakub.StepakJakubBlogContextDataSetTableAdapters.PostsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.blogsBindingNavigator)).BeginInit();
             this.blogsBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.blogsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postsBindingNavigator)).BeginInit();
             this.postsBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.postsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stepakJakubBlogContextDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blogsBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // stepakJakubBlogContextDataSet
-            // 
-            this.stepakJakubBlogContextDataSet.DataSetName = "StepakJakubBlogContextDataSet";
-            this.stepakJakubBlogContextDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // blogsBindingSource
-            // 
-            this.blogsBindingSource.DataMember = "Blogs";
-            this.blogsBindingSource.DataSource = this.stepakJakubBlogContextDataSet;
-            // 
-            // blogsTableAdapter
-            // 
-            this.blogsTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.@__MigrationHistoryTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BlogsTableAdapter = this.blogsTableAdapter;
-            this.tableAdapterManager.PostsTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = StepakJakub.StepakJakubBlogContextDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // blogsBindingNavigator
             // 
@@ -138,7 +116,7 @@
             this.blogsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.blogsBindingNavigator.Name = "blogsBindingNavigator";
             this.blogsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.blogsBindingNavigator.Size = new System.Drawing.Size(1338, 31);
+            this.blogsBindingNavigator.Size = new System.Drawing.Size(1189, 31);
             this.blogsBindingNavigator.TabIndex = 0;
             this.blogsBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -154,7 +132,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 28);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -166,6 +144,12 @@
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(44, 28);
+            this.toolStripLabel2.Text = "Blogi";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -195,7 +179,7 @@
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(45, 27);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
@@ -247,20 +231,19 @@
             this.dataGridViewTextBoxColumn3,
             this.PostCount});
             this.blogsDataGridView.DataSource = this.blogsBindingSource;
-            this.blogsDataGridView.Location = new System.Drawing.Point(12, 102);
+            this.blogsDataGridView.Location = new System.Drawing.Point(11, 82);
+            this.blogsDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.blogsDataGridView.Name = "blogsDataGridView";
             this.blogsDataGridView.RowTemplate.Height = 28;
-            this.blogsDataGridView.Size = new System.Drawing.Size(723, 433);
+            this.blogsDataGridView.Size = new System.Drawing.Size(643, 346);
             this.blogsDataGridView.TabIndex = 1;
             // 
-            // postsBindingSource
+            // PostCount
             // 
-            this.postsBindingSource.DataMember = "Posts";
-            this.postsBindingSource.DataSource = this.stepakJakubBlogContextDataSet;
-            // 
-            // postsTableAdapter
-            // 
-            this.postsTableAdapter.ClearBeforeFill = true;
+            this.PostCount.DataPropertyName = "PostCount";
+            this.PostCount.HeaderText = "Post\'s count";
+            this.PostCount.Name = "PostCount";
+            this.PostCount.ReadOnly = true;
             // 
             // postsDataGridView
             // 
@@ -272,19 +255,12 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.postsDataGridView.DataSource = this.postsBindingSource;
-            this.postsDataGridView.Location = new System.Drawing.Point(741, 102);
+            this.postsDataGridView.Location = new System.Drawing.Point(659, 82);
+            this.postsDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.postsDataGridView.Name = "postsDataGridView";
             this.postsDataGridView.RowTemplate.Height = 28;
-            this.postsDataGridView.Size = new System.Drawing.Size(592, 433);
+            this.postsDataGridView.Size = new System.Drawing.Size(526, 346);
             this.postsDataGridView.TabIndex = 2;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "PostId";
-            this.dataGridViewTextBoxColumn4.HeaderText = "PostId";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 40;
             // 
             // Blog
             // 
@@ -293,23 +269,12 @@
             this.Blog.Name = "Blog";
             this.Blog.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Title";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Title";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Content";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Content";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
             // AddPostButton
             // 
-            this.AddPostButton.Location = new System.Drawing.Point(1206, 541);
+            this.AddPostButton.Location = new System.Drawing.Point(1072, 433);
+            this.AddPostButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddPostButton.Name = "AddPostButton";
-            this.AddPostButton.Size = new System.Drawing.Size(109, 33);
+            this.AddPostButton.Size = new System.Drawing.Size(97, 26);
             this.AddPostButton.TabIndex = 3;
             this.AddPostButton.Text = "Dodaj post";
             this.AddPostButton.UseVisualStyleBackColor = true;
@@ -317,10 +282,11 @@
             // 
             // refreshButton
             // 
-            this.refreshButton.Location = new System.Drawing.Point(12, 541);
+            this.refreshButton.Location = new System.Drawing.Point(11, 433);
+            this.refreshButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.refreshButton.Name = "refreshButton";
             this.refreshButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.refreshButton.Size = new System.Drawing.Size(107, 33);
+            this.refreshButton.Size = new System.Drawing.Size(95, 26);
             this.refreshButton.TabIndex = 4;
             this.refreshButton.Text = "Odśwież";
             this.refreshButton.UseVisualStyleBackColor = true;
@@ -355,9 +321,10 @@
             this.postsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
             this.postsBindingNavigator.Name = "postsBindingNavigator";
             this.postsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem1;
-            this.postsBindingNavigator.Size = new System.Drawing.Size(1338, 31);
+            this.postsBindingNavigator.Size = new System.Drawing.Size(1189, 31);
             this.postsBindingNavigator.TabIndex = 5;
             this.postsBindingNavigator.Text = "postsBindingNavigator";
+            this.postsBindingNavigator.RefreshItems += new System.EventHandler(this.postsBindingNavigator_RefreshItems);
             // 
             // bindingNavigatorAddNewItem1
             // 
@@ -371,7 +338,7 @@
             // bindingNavigatorCountItem1
             // 
             this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem1";
-            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(54, 28);
+            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(45, 28);
             this.bindingNavigatorCountItem1.Text = "of {0}";
             this.bindingNavigatorCountItem1.ToolTipText = "Total number of items";
             // 
@@ -383,6 +350,12 @@
             this.bindingNavigatorDeleteItem1.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorDeleteItem1.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorDeleteItem1.Text = "Delete";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(44, 28);
+            this.toolStripLabel1.Text = "Posty";
             // 
             // bindingNavigatorMoveFirstItem1
             // 
@@ -412,7 +385,7 @@
             this.bindingNavigatorPositionItem1.AccessibleName = "Position";
             this.bindingNavigatorPositionItem1.AutoSize = false;
             this.bindingNavigatorPositionItem1.Name = "bindingNavigatorPositionItem1";
-            this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(50, 31);
+            this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(45, 27);
             this.bindingNavigatorPositionItem1.Text = "0";
             this.bindingNavigatorPositionItem1.ToolTipText = "Current position";
             // 
@@ -459,17 +432,35 @@
             this.toolStripSeparator.Name = "toolStripSeparator";
             this.toolStripSeparator.Size = new System.Drawing.Size(6, 31);
             // 
-            // toolStripLabel1
+            // postsBindingSource
             // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(56, 28);
-            this.toolStripLabel1.Text = "Posty";
+            this.postsBindingSource.DataMember = "Posts";
+            this.postsBindingSource.DataSource = this.stepakJakubBlogContextDataSet;
             // 
-            // toolStripLabel2
+            // stepakJakubBlogContextDataSet
             // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(52, 28);
-            this.toolStripLabel2.Text = "Blogi";
+            this.stepakJakubBlogContextDataSet.DataSetName = "StepakJakubBlogContextDataSet";
+            this.stepakJakubBlogContextDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "PostId";
+            this.dataGridViewTextBoxColumn4.HeaderText = "PostId";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 40;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Title";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Title";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Content";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Content";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -493,38 +484,54 @@
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.Width = 150;
             // 
-            // PostCount
+            // blogsBindingSource
             // 
-            this.PostCount.DataPropertyName = "PostCount";
-            this.PostCount.HeaderText = "Post\'s count";
-            this.PostCount.Name = "PostCount";
-            this.PostCount.ReadOnly = true;
+            this.blogsBindingSource.DataMember = "Blogs";
+            this.blogsBindingSource.DataSource = this.stepakJakubBlogContextDataSet;
+            // 
+            // blogsTableAdapter
+            // 
+            this.blogsTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.@__MigrationHistoryTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BlogsTableAdapter = this.blogsTableAdapter;
+            this.tableAdapterManager.CommentsTableAdapter = null;
+            this.tableAdapterManager.PostsTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = StepakJakub.StepakJakubBlogContextDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // postsTableAdapter
+            // 
+            this.postsTableAdapter.ClearBeforeFill = true;
             // 
             // BlogForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1338, 586);
+            this.ClientSize = new System.Drawing.Size(1189, 469);
             this.Controls.Add(this.postsBindingNavigator);
             this.Controls.Add(this.refreshButton);
             this.Controls.Add(this.AddPostButton);
             this.Controls.Add(this.postsDataGridView);
             this.Controls.Add(this.blogsDataGridView);
             this.Controls.Add(this.blogsBindingNavigator);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "BlogForm";
             this.Text = "BlogForm";
             this.Load += new System.EventHandler(this.BlogForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.stepakJakubBlogContextDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blogsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.blogsBindingNavigator)).EndInit();
             this.blogsBindingNavigator.ResumeLayout(false);
             this.blogsBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.blogsDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.postsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.postsBindingNavigator)).EndInit();
             this.postsBindingNavigator.ResumeLayout(false);
             this.postsBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.postsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stepakJakubBlogContextDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blogsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
