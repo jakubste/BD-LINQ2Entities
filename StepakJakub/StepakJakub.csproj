@@ -54,6 +54,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddComment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddComment.Designer.cs">
+      <DependentUpon>AddComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPost.Designer.cs">
+      <DependentUpon>AddPost.cs</DependentUpon>
+    </Compile>
     <Compile Include="Blog.cs" />
     <Compile Include="BlogContext.cs" />
     <Compile Include="BlogForm.cs">
@@ -62,6 +74,7 @@
     <Compile Include="BlogForm.Designer.cs">
       <DependentUpon>BlogForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Comment.cs" />
     <Compile Include="Migrations\201511071858584_addUrl.cs" />
     <Compile Include="Migrations\201511071858584_addUrl.Designer.cs">
       <DependentUpon>201511071858584_addUrl.cs</DependentUpon>
@@ -74,7 +87,33 @@
     <Compile Include="Migrations\201511071947505_dbset.Designer.cs">
       <DependentUpon>201511071947505_dbset.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201511092130596_add-comment-model.cs" />
+    <Compile Include="Migrations\201511092130596_add-comment-model.Designer.cs">
+      <DependentUpon>201511092130596_add-comment-model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511111056076_add-comments-to-post.cs" />
+    <Compile Include="Migrations\201511111056076_add-comments-to-post.Designer.cs">
+      <DependentUpon>201511111056076_add-comments-to-post.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511111143082_comments-in-posts.cs" />
+    <Compile Include="Migrations\201511111143082_comments-in-posts.Designer.cs">
+      <DependentUpon>201511111143082_comments-in-posts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="CommentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommentForm.Designer.cs">
+      <DependentUpon>CommentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="StepakJakubBlogContextDataSet.cs">
+      <DependentUpon>StepakJakubBlogContextDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="StepakJakubBlogContextDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -110,6 +149,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddComment.resx">
+      <DependentUpon>AddComment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPost.resx">
+      <DependentUpon>AddPost.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BlogForm.resx">
       <DependentUpon>BlogForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +166,22 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201511071947505_dbset.resx">
       <DependentUpon>201511071947505_dbset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511092130596_add-comment-model.resx">
+      <DependentUpon>201511092130596_add-comment-model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommentForm.resx">
+      <DependentUpon>CommentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511111056076_add-comments-to-post.resx">
+      <DependentUpon>201511111056076_add-comments-to-post.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511111143082_comments-in-posts.resx">
+      <DependentUpon>201511111143082_comments-in-posts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

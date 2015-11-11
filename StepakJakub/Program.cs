@@ -12,6 +12,27 @@ namespace StepakJakub
         static void Main(string[] args)
         {
             BlogContext blogContext = new BlogContext();
+
+            /*
+            var coms = from com in blogContext.CommentsList
+                       select com;
+
+            foreach (var com in coms)
+            {
+                Console.WriteLine(com.PostId);
+                Console.WriteLine(com.Content);
+            }
+
+            var posts = blogContext.PostsList.Select(p => p);
+
+            foreach (var post in posts)
+            {
+                Console.WriteLine(post.Comments);
+            }
+            */
+
+
+            /*
             Console.WriteLine("Podaj nazwe bloga");
             string input;
             input = Console.ReadLine();
@@ -33,9 +54,28 @@ namespace StepakJakub
             }
 
             Console.WriteLine("po petli");
+            */
+
+            int blogid = (from b in blogContext.BlogsList
+                          where b.Name == "blogasek"
+                          select b.BlogId).First();
+
+            /*
+            Post post = new Post();
+            post.BlogId = blogid;
+            post.Content = "bla bla bla";
+            post.Title = "BlaTitle";
+            blogContext.PostsList.Add(post);
+            blogContext.SaveChanges();
+            */
 
             BlogForm blogform = new BlogForm();
             blogform.ShowDialog();
+
+            CommentForm commentForm = new CommentForm();
+            commentForm.ShowDialog();
+
+
 
             Console.Read();
         }

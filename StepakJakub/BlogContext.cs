@@ -11,5 +11,6 @@ namespace StepakJakub
     {
         public DbSet<Blog> BlogsList { get; set; }
         public DbSet<Post> PostsList { get; set; }
+        public DbSet<Comment> CommentsList { get; set; }
     }
 }
