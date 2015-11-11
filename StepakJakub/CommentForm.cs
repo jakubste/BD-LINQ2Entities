@@ -37,7 +37,7 @@ namespace StepakJakub.Migrations
 
             blogs = bContext.BlogsList.Include(b => b.Posts);
             posts = bContext.PostsList;
-            comments = bContext.CommentsList;
+            comments = bContext.CommentsList.Select(c => c);
         }
 
         private void Form1_Load(object sender, EventArgs e)
